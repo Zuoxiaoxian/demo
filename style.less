@@ -1,0 +1,204 @@
+@import url(demo/assets/css/bootstrap.min.css);
+@import url(demo/assets/css/toastr.min.css);
+
+body{
+    padding-right: 0px !important;
+}
+
+// 隐藏滚动条
+::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes enter {
+	from {opacity:0;transform:rotate(-90deg) scale(0);}
+	to {opacity:1;transform:rotate(0) scale(1);}
+}
+
+
+header{
+    // menu
+    .navbar-toggler{
+        padding: 0;
+    }
+    .category-item-active{
+        background: #feb101 !important;
+    }
+    .category-item{
+        display: flex;
+        gap: 1rem;
+        a{
+            width: 100%;
+        }
+        img{
+            width: 40px;
+        }
+        &:first-child{
+            img{
+                width: 30px;
+                margin-right: 6px;
+            }
+        }
+
+        .chevron-right{
+            float: right;
+            width: 30px;
+            margin-right: 0px !important;
+        }
+    }
+    // logo
+    .logo{
+        height: 100%;
+        width: 100%;
+    }
+
+    // 语言切换
+    .btn-group{
+        height: 100%;
+        gap: 5px;
+        button{
+            background-size: 26px;
+            background-repeat: no-repeat;
+            background-position: 40px  13px;
+            padding-right: 50px;
+            background-color: #FFFFFF;
+            font-family: Source Sans Pro;
+            font-weight: 600;
+            color: #0D262E;
+            width: 75px;
+        }
+        .dropdown-toggle::after{
+            display: table-column;
+        }
+
+        // login user
+        .login_user{
+            align-items: center;
+            display: grid;
+            img{
+                height: 30px;
+            }
+        }
+    }
+
+    // modal
+    #loginModal{
+        .username_prefix{
+            display: flex;
+            select{
+                width: 50%;
+            }
+        }
+    }
+    #unsubModal{
+        .modal-header{
+            display: block;
+            img{
+                width: 50px;
+                height: 50px;
+                margin-bottom: 8px;
+            }
+            .unsub-title{
+                margin-bottom: 8px;
+            }
+        }
+        .modal-body{
+            .unsub-desc{
+                font-size: 15px;
+                line-height: 1.4;
+            }
+        }
+        .modal-footer{
+            button{
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+// 主体部分
+.contenter{
+    margin-top: 3rem;
+    padding: 2vh 20px;
+    margin-bottom: 5rem;
+
+    // about 
+    #aboutus{
+        .user-info{
+            img{
+                width: 64px;
+            }
+            .mobile_no{
+                color: #fff;
+            }
+        }
+        .abouts-list{
+            margin: 10px -20px 20px;
+            .about_list_item_img{
+                width: 24px;
+            }
+            .about_list_item_title{
+                margin-left: 1rem;
+            }
+            .chevron-right{
+                float: right;
+            }
+        }
+        .about-logout{
+            button{
+                color: #fff;
+            }
+        }
+    }
+    
+}
+
+// footer
+footer{
+    .row{
+        // a{
+        .footer-item{
+            text-decoration: none;
+            color: aliceblue;
+            img{
+                width: 40px;
+            }
+            span{
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+}
+
+// 主题
+[data-bs-theme="myblue"] {
+    body{
+        background-color: #005aa2;
+        header{
+            background: #0d262e;
+            .row{
+                background: #0d262e;
+            }
+            // menu
+            .navbar-toggler{
+                background-color: var(--bs-body-bg);
+            }
+            // language
+            .btn-group{
+                
+                button{
+                    background-color: #0d262e;
+                    color: var(--bs-body-bg);
+                }
+            }
+        }
+
+        footer{
+            .row{
+                background-color: #005aa2;
+            }
+        }
+    }
+}
